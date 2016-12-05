@@ -4,7 +4,7 @@ $(document).ready( function() {
 	$('.js-back').hide();
 	//Llamo a la función que pinta en el elemento p 
 	printNews();
-	
+
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
@@ -21,6 +21,16 @@ function printNews() {
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+	//recorre el arreglo de los objetos
+	for ( var i = 0; i < recipesArray.length; i++ ) {
+		//guarda en una variable
+		var recipe = recipesArray[i];
+		if( recipe.highlighted == true ) {
+			
+			renderRecipe(recipe);
+		}
+	}
+	// _.each(recipesArray, renderRecipe);
 }
 
 /*
