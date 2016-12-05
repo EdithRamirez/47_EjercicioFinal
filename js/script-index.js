@@ -2,14 +2,18 @@ $(document).ready( function() {
 
 	//oculta la flecha de menu
 	$('.js-back').hide();
-
-
-
+	//Llamo a la función que pinta en el elemento p 
+	printNews();
+	
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
 });
 
+/*funcion que pinta el texto del parrafo*/
+function printNews() {
+	$(".callout-news p").text("NUEVAS RECETAS");
+}
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
