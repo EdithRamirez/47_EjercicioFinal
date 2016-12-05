@@ -25,6 +25,7 @@ function renderHighlightedRecipes(recipesArray) {
 	for ( var i = 0; i < recipesArray.length; i++ ) {
 		//guarda en una variable
 		var recipe = recipesArray[i];
+		//condicion que mostrara solo aquellos que cumplan el valor de true
 		if( recipe.highlighted == true ) {
 			
 			renderRecipe(recipe);
@@ -41,8 +42,41 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
-}
+	
+	//Variables de las etiquetas a crear en el html
+	var aItem = $('<a class="item-recipe" href="#"></a>');
 
+	var spanAttr = $('<span class="attribution"></span>');
+	
+	var spanTitle = $('<span class="title-recipe"></span>');
+	//pinta el valor que se tiene en el arreglo que corresponde al titulo
+	spanTitle.text(recipe.title);
+	
+	var spanMeta = $('<span class="metadata-recipe"></span>');
+	
+	var spanAuthor = $('<span class="author-recipe"></span>');
+	spanAuthor.text(recipe.source.name);
+	
+	var spanBook = $('<span class="bookmarks-recipe"></span>');
+	
+	var spanIcon = $('<span class="icon-bookmark"></span>');
+	spanIcon.text(recipe.cookTime);
+	
+	var imgUrl = $('<img/>');
+	imgUrl.attr('src', recipe.source.url);
+
+	///pinta en pantalla las etiquetas
+	aItem.append(spanAttr);
+	spanAttr.append(spanTitle);
+	spanAttr.append(spanMeta);
+	spanMeta.append(spanAuthor);
+	spanMeta.append(spanBook);
+	spanBook.append(spanIcon);
+	aItem.append(imgUrl);
+
+	//div padre donde se insertaran los hijos creados en html
+	$('.list-recipes').append(aItem);
+}
 
 
 /*
