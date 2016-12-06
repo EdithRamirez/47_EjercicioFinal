@@ -1,8 +1,16 @@
 $(document).ready(function() {
 	console.log('HTML Listo');
 
+
+
 	//ocultar menu
 	$('.js-menu').hide();
+
+	$('.js-back').on('click', function() {
+		console.log('Regresa a index.html');
+		window.location = 'index.html';
+	});
+
 
 	//boton js-show-recipe elimina la clase make al dar click
 	$('.js-show-recipe').on('click', function() {
