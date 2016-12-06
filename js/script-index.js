@@ -87,11 +87,10 @@ function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
 	
 	for ( var i = 0; i < activitiesArray.length; i++ ) {	
-
-		if( activitiesArray.length > 0 ) {	
-			$('div.wrapper-message').hide();
-			renderActivity(activitiesArray[i]);
-		}
+		renderActivity(activitiesArray[i]);
+	}
+	if( activitiesArray.length > 0 ) {	
+		$('div.wrapper-message').hide();	
 	}
 }
 
