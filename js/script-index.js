@@ -86,10 +86,11 @@ function renderRecipe(recipe) {
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
 	
-	for ( var i = 0; i < activitiesArray.length; i++ ) {
+	for ( var i = 0; i < activitiesArray.length; i++ ) {	
 
 		if( activitiesArray.length > 0 ) {	
 			$('div.wrapper-message').hide();
+			renderActivity(activitiesArray[i]);
 		}
 	}
 }
@@ -99,8 +100,29 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(activitiy) {
-	
+function renderActivity(activity) {
+	console.log('Voy a pintar la actividad: ', activity);
+
+	//Se crea el html con underscope 
+	var template = '<a href="#" class="item-activity">' +
+		'<span class="attribution">' +
+			'<span class="avatar">' +
+				'<img src="<%= userAvatar %>" class="image-avatar">' +
+			'</span>' +
+			'<span class="meta">' +
+				'<span class="author"> <%= userName %> </span> made' +
+				'<span class="recipe"> <%= recipeName %> </span>: ' +  
+				'<span class="location"> <%= place %> </span>' +
+			'</span>' +
+		'</span>' +
+		'<div class="bg-image" style="background-image: url(&quot;<%= image %>&quot;)"></div>' +
+	'</a>';
+
+	var compiled = _.template(template);
+
+	var a = compiled(activity);
+	console.log(template);
+
+	var elemento = $(a);
+	$('.list-activities').append(elemento);
 }
-
-
