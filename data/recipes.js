@@ -7,7 +7,7 @@ var recipesArray = [
     "excerpt": "When I’ve got too many cheese bits on hand, it's now fromage fort to the rescue",
     "source": {
       "name": "David Lebovitz",
-      "url": "https://farm4.staticflickr.com/3833/13606018655_f0f3304e7d.jpg"
+      "url": "http://www.davidlebovitz.com/2014/04/fromage-forte-cheese-dip-spread-recipe/"
     },
     "cookTime": "15 min",
     "ingredients": [
@@ -153,7 +153,7 @@ var recipesArray = [
     "excerpt": "It is a thing of beauty, shaped into a large oval loaf and glazed with tangy cocktail sauce",
     "source": {
       "name": "Food52",
-      "url": "https://images.food52.com/LxsSw_Zt_8oNqtkNzUWmU1OuFfE=/753x502/67b942d2-984e-4b72-816e-460573d0b238--Meat_Loaf.jpg"
+      "url": "http://food52.com/recipes/24302-fatted-calf-s-meatloaf"
     },
     "cookTime": "1 hr 30 min",
     "ingredients": [
@@ -313,7 +313,7 @@ var recipesArray = [
     "excerpt": "Juicy, fragrant, perfectly textured for a little fire action",
     "source": {
       "name": "Tartelette",
-      "url": "http://farm7.static.flickr.com/6142/5930981316_e20d210aec_o.jpg"
+      "url": "http://www.tarteletteblog.com/2011/07/recipe-gluten-free-apricots-honey-panna.html"
     },
     "cookTime": "35 min",
     "ingredients": [
@@ -422,7 +422,7 @@ var recipesArray = [
     "excerpt": "Making homemade pasta may seem arduous, but this dish is worth the extra work",
     "source": {
       "name": "Martha Stewart",
-      "url": "http://megan.stetted.com/blog/wp-content/uploads/2013/01/bnutlasagna2.jpg"
+      "url": "http://www.marthastewart.com/857657/roasted-butternut-squash-lasagna"
     },
     "cookTime": "1 hr 35 min",
     "ingredients": [
@@ -572,7 +572,7 @@ var recipesArray = [
     "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
     "source": {
       "name": "NY Times",
-      "url": "https://static01.nyt.com/images/2012/12/19/dining/19KITCH_SPAN/19KITCH_SPAN-articleLarge-v2.jpg"
+      "url": "http://www.nytimes.com/recipes/1014424/italian-red-wine-braised-duck-with-olive-gremolata.html"
     },
     "cookTime": "2 hr 30 min",
     "ingredients": [
@@ -709,7 +709,7 @@ var recipesArray = [
     "excerpt": "A good chocolate tart doesn’t need to be fancy, but it needs to be deep, dark, and yes, somewhat decadent.",
     "source": {
       "name": "David Lebovitz",
-      "url": "http://farm7.static.flickr.com/6044/6249868484_69b9bc47f5.jpg"
+      "url": "http://www.davidlebovitz.com/2011/10/chocolate-tart-recipe/"
     },
     "cookTime": "1 hr",
     "ingredients": [

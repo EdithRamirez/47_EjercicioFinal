@@ -7,6 +7,7 @@ $(document).ready( function() {
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	renderActivities(activities);
 
 });
 
@@ -27,7 +28,6 @@ function renderHighlightedRecipes(recipesArray) {
 		var recipe = recipesArray[i];
 		//condicion que mostrara solo aquellos que cumplan el valor de true
 		if( recipe.highlighted == true ) {
-			
 			renderRecipe(recipe);
 		}
 	}
@@ -63,7 +63,8 @@ function renderRecipe(recipe) {
 	spanIcon.text(recipe.cookTime);
 	
 	var imgUrl = $('<img/>');
-	imgUrl.attr('src', recipe.source.url);
+	//se modifica atributo para que se vea la imagen de la receta
+	imgUrl.attr('src', 'img/recipes/320x350/' + recipe.name + '.jpg');
 
 	///pinta en pantalla las etiquetas
 	aItem.append(spanAttr);
@@ -84,6 +85,13 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+	
+	for ( var i = 0; i < activitiesArray.length; i++ ) {
+
+		if( activitiesArray.length > 0 ) {	
+			$('div.wrapper-message').hide();
+		}
+	}
 }
 
 /*
@@ -91,7 +99,7 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
+function renderActivity(activitiy) {
 	
 }
 
